@@ -1,0 +1,750 @@
+<table border='2px'>
+    <tr>
+      <th colspan="41" align="left"><strong class="ng-binding">Monthly Data Item Wise Report Across Facility From Apr-2020
+          To Apr-2020</strong><br> <span style="font: italic;" class="ng-binding">Data
+          as on 24th February 2021 11:37:36 AM</span></th>
+    </tr>
+    <th rowspan="2">#</th>
+    <th rowspan="2">State</th>
+    <!-- ngIf: stateHierarchyInfo[0].zone_circle -->
+    <th rowspan="2" ng-if="stateHierarchyInfo[0].zone_circle" class="ng-binding ng-scope">Zone</th>
+    <!-- end ngIf: stateHierarchyInfo[0].zone_circle -->
+    <th rowspan="2">District</th>
+    <th rowspan="2">District Category</th>
+    <!-- ngIf: stateHierarchyInfo[0].subdistrict -->
+    <th rowspan="2" ng-if="stateHierarchyInfo[0].subdistrict" class="ng-scope">Sub-district</th>
+    <!-- end ngIf: stateHierarchyInfo[0].subdistrict -->
+    <!-- ngIf: stateHierarchyInfo[0].block -->
+    <th rowspan="2" ng-if="stateHierarchyInfo[0].block" class="ng-binding ng-scope">Block</th>
+    <!-- end ngIf: stateHierarchyInfo[0].block -->
+    <!-- ngIf: stateHierarchyInfo[0].healthblock -->
+    <th rowspan="2" ng-if="stateHierarchyInfo[0].healthblock" class="ng-binding ng-scope">Health Block</th>
+    <!-- end ngIf: stateHierarchyInfo[0].healthblock -->
+    <!-- ngIf: stateHierarchyInfo[0].subdivision -->
+    <th rowspan="2" ng-if="stateHierarchyInfo[0].subdivision" class="ng-binding ng-scope">Sub-Division</th>
+    <!-- end ngIf: stateHierarchyInfo[0].subdivision -->
+    <!-- ngIf: stateHierarchyInfo[0].dulb || stateHierarchyInfo[0].sulb  -->
+    <th rowspan="2" ng-if="stateHierarchyInfo[0].dulb || stateHierarchyInfo[0].sulb " class="ng-scope">ULB</th>
+    <!-- end ngIf: stateHierarchyInfo[0].dulb || stateHierarchyInfo[0].sulb  -->
+    <th rowspan="2">Facility Type</th>
+    <th rowspan="2">Facility Code</th>
+    <th rowspan="2"> Facility Name</th>
+    <th rowspan="2">Category</th>
+    <th rowspan="2">Bed Count</th>
+    <th rowspan="2">Facility NIN Number</th>
+    <th rowspan="2">Rural/Urban</th>
+    <th rowspan="2">Ownership</th>
+    <th rowspan="2">Physical/Notional</th>
+    <th rowspan="2">Status</th>
+    <!-- ngIf: dsummary.reporttype.report_code =='AFAP' -->
+    <!-- ngRepeat: h in key_header track by $index -->
+    <!-- ngIf: (selectedForm!==1) -->
+    <th ng-repeat="h in key_header track by $index" colspan="17" ng-if="(selectedForm!==1)" class="ng-binding ng-scope">M1
+      [Ante Natal Care (ANC)]</th><!-- end ngIf: (selectedForm!==1) -->
+    <!-- end ngRepeat: h in key_header track by $index -->
+    <!-- ngIf: (selectedForm!==1) -->
+    <th ng-repeat="h in key_header track by $index" colspan="7" ng-if="(selectedForm!==1)" class="ng-binding ng-scope">M2
+      [Deliveries]</th><!-- end ngIf: (selectedForm!==1) -->
+    <!-- end ngRepeat: h in key_header track by $index -->
+    <!-- ngIf: (selectedForm!==1) -->
+    <th ng-repeat="h in key_header track by $index" colspan="8" ng-if="(selectedForm!==1)" class="ng-binding ng-scope">M3
+      [Pregnancy outcome &amp; details of new-born]</th><!-- end ngIf: (selectedForm!==1) -->
+    <!-- end ngRepeat: h in key_header track by $index -->
+    <!-- ngIf: (selectedForm!==1) -->
+    <th ng-repeat="h in key_header track by $index" colspan="4" ng-if="(selectedForm!==1)" class="ng-binding ng-scope">M4
+      [Post Natal Care (PNC)]</th><!-- end ngIf: (selectedForm!==1) -->
+    <!-- end ngRepeat: h in key_header track by $index -->
+    <!-- ngIf: (selectedForm!==1) -->
+    <th ng-repeat="h in key_header track by $index" colspan="15" ng-if="(selectedForm!==1)" class="ng-binding ng-scope">M5
+      [Family Planning]</th><!-- end ngIf: (selectedForm!==1) -->
+    <!-- end ngRepeat: h in key_header track by $index -->
+    <!-- ngIf: (selectedForm!==1) -->
+    <th ng-repeat="h in key_header track by $index" colspan="51" ng-if="(selectedForm!==1)" class="ng-binding ng-scope">M6
+      [CHILD IMMUNISATION]</th><!-- end ngIf: (selectedForm!==1) -->
+    <!-- end ngRepeat: h in key_header track by $index -->
+    <!-- ngIf: (selectedForm!==1) -->
+    <th ng-repeat="h in key_header track by $index" colspan="5" ng-if="(selectedForm!==1)" class="ng-binding ng-scope">M7
+      [Number of cases of Childhood Diseases (0-5 years)]</th><!-- end ngIf: (selectedForm!==1) -->
+    <!-- end ngRepeat: h in key_header track by $index -->
+    <!-- ngIf: (selectedForm!==1) -->
+    <th ng-repeat="h in key_header track by $index" colspan="3" ng-if="(selectedForm!==1)" class="ng-binding ng-scope">M8
+      [NVBDCP]</th><!-- end ngIf: (selectedForm!==1) -->
+    <!-- end ngRepeat: h in key_header track by $index -->
+    <!-- ngIf: (selectedForm!==1) -->
+    <th ng-repeat="h in key_header track by $index" colspan="11" ng-if="(selectedForm!==1)" class="ng-binding ng-scope">M9
+      [Patient Services]</th><!-- end ngIf: (selectedForm!==1) -->
+    <!-- end ngRepeat: h in key_header track by $index -->
+    <!-- ngIf: (selectedForm!==1) -->
+    <th ng-repeat="h in key_header track by $index" colspan="4" ng-if="(selectedForm!==1)" class="ng-binding ng-scope">M10
+      [Laboratory Testing]</th><!-- end ngIf: (selectedForm!==1) -->
+    <!-- end ngRepeat: h in key_header track by $index -->
+    <!-- ngIf: (selectedForm!==1) -->
+    <th ng-repeat="h in key_header track by $index" colspan="18" ng-if="(selectedForm!==1)" class="ng-binding ng-scope">
+      M11 [Drugs]</th><!-- end ngIf: (selectedForm!==1) -->
+    <!-- end ngRepeat: h in key_header track by $index -->
+    <!-- ngIf: (selectedForm!==1) -->
+    <th ng-repeat="h in key_header track by $index" colspan="36" ng-if="(selectedForm!==1)" class="ng-binding ng-scope">
+      M12 [Details of deaths reported with probable causes:]</th><!-- end ngIf: (selectedForm!==1) -->
+    <!-- end ngRepeat: h in key_header track by $index -->
+    </tr>
+    <!-- ngRepeat: colno in indicator_header track by $index -->
+    <!-- ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">1.1 Total number of
+        pregnant women registered for ANC</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">1.1.1 Out of the total
+        ANC registered, number registered within 1st trimester (within 12 weeks)</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">1.2.1 Number of PW given
+        TT1/ Td1</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">1.2.2 Number of PW given
+        TT2 / Td2</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">1.2.3 Number of PW given
+        TT Booster/ Td Booster</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">1.2.4 Number of PW
+        provided full Course 180 Iron Folic Acid (IFA) tablets</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">1.2.5 Number of PW
+        provided full Course 360 Calcium tablets</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">1.2.6 Number of PW given
+        one Albendazole tablet after 1st trimester</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">1.2.7 Number of PW
+        received 4 or more ANC check ups</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">1.2.8 Number of PW given
+        ANC Corticosteroids in Pre Term Labour</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">1.3.1 New cases of PW
+        with hypertension detected</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">1.3.1.a Out of the new
+        cases of PW with hypertension detected, cases managed at institution</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">1.4.1 Number of PW tested
+        for Haemoglobin (Hb ) 4 or more than 4 times for respective ANCs</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">1.4.2 Number of PW having
+        Hb level&lt;11 (out of total tested cases)(7.1 to 10.9)</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">1.4.3 Number of PW having
+        Hb level&lt;7 (out of total tested cases)</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">1.5.1.a Number of PW
+        tested using POC test for Syphilis</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">1.5.1.b Out of
+        above,number of PW found sero positive for Syphilis</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">2.1.1.a Number of Home
+        Deliveries attended by Skill Birth Attendant(SBA) (Doctor/Nurse/ANM/ Midwife)</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">2.1.1.b Number of Home
+        Deliveries attended by Non SBA (Trained Birth Attendant(TBA) /Relatives/etc.)</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">2.1.2 Number of PW given
+        Tablet Misoprostol during home delivery</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">2.1.3 Number of newborns
+        received 7 Home Based Newborn Care (HBNC) visits in case of Home delivery</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">2.2 Number of
+        Institutional Deliveries conducted (Including C-Sections)</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">2.2.1 Out of total
+        institutional deliveries number of women discharged within 48 hours of delivery</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">2.2.2 Number of newborns
+        received 6 HBNC&nbsp; visits after Institutional Delivery</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">3.1.1.a Live Birth -
+        Male</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">3.1.1.b Live Birth -
+        Female</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">3.1.2 Number of Pre term
+        newborns (&lt; 37 weeks of pregnancy)</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">3.1.3 Still Birth</span>
+    </th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">3.2 Abortion
+        (spontaneous)</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">3.3.1 Number of newborns
+        weighed at birth</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">3.3.2 Number of newborns
+        having weight less than 2.5 kg</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">3.3.3 Number of Newborns
+        breast fed within 1 hour of birth&nbsp;</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">4.1 Women receiving 1st
+        post partum checkups within 48 hours of home delivery</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">4.2 Women receiving 1st
+        post partum checkup between 48 hours and 14 days</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">4.3 Number of mothers
+        provided full course of 180 IFA tablets after delivery</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">4.4 Number of mothers
+        provided full course of 360 Calcium tablets after delivery</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">5.1 Number of Interval
+        IUCD Insertions (excluding PPIUCD and PAIUCD)</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">5.2 Number of Postpartum
+        (within 48 hours of delivery) IUCD insertions</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">5.3 Number of IUCD
+        Removals</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">5.4 Number of
+        complications following IUCD Insertion</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">5.5 Injectable
+        Contraceptive-Antara Program- First Dose</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <th
+      ng-if="(dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') &amp;&amp; selectedForm!==1"
+      ng-repeat="colno in dataItemHeader track by $index" colspan="" rowspan="1"
+      style="min-width: 150px;vertical-align: middle;" class="ng-scope"><span
+        style="word-wrap: break-word;white-space: normal;text-align: center;" class="ng-binding">8.1.1.b Malaria (RDT) -
+        Plasmodium Vivax test positive</span></th>
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    <!-- ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+
+    <!-- end ngIf: (dsummary.reporttype.report_code =='AF' || dsummary.reporttype.report_code =='AFAP') && selectedForm!==1 -->
+    <!-- end ngRepeat: colno in dataItemHeader track by $index -->
+    </tr>
+    <!-- ngRepeat: i in indicator_header track by $index -->
+    <!-- ngRepeat: i in subItemHeader track by $index -->
+  
+    </tr>
+    <td class="ng-binding">1</td>
+    <td class="ng-binding">Delhi(7)</td>
+    <!-- ngIf: stateHierarchyInfo[0].zone_circle -->
+    <td ng-if="stateHierarchyInfo[0].zone_circle" class="ng-binding ng-scope">
+      <!-- ngIf: record.zonename!=null && record.zonename!=='' -->
+    </td><!-- end ngIf: stateHierarchyInfo[0].zone_circle -->
+    <td>
+      <!-- ngIf: record.districtname!='' && record.districtname!==null --><span
+        ng-if="record.districtname!='' &amp;&amp; record.districtname!==null"
+        class="ng-binding ng-scope">Central(77)</span>
+      <!-- end ngIf: record.districtname!='' && record.districtname!==null -->
+    </td>
+    <td class="ng-binding">High Priority</td>
+    <!-- ngIf: stateHierarchyInfo[0].subdistrict -->
+    <td ng-if="stateHierarchyInfo[0].subdistrict" class="ng-scope">
+      <!-- ngIf: record.subdistrictname!=null && record.subdistrictname!=='' --><span
+        ng-if="record.subdistrictname!=null &amp;&amp; record.subdistrictname!==''" class="ng-binding ng-scope">Civil
+        Lines(433)</span><!-- end ngIf: record.subdistrictname!=null && record.subdistrictname!=='' -->
+    </td><!-- end ngIf: stateHierarchyInfo[0].subdistrict -->
+    <!-- ngIf: stateHierarchyInfo[0].block -->
+    <td ng-if="stateHierarchyInfo[0].block" class="ng-scope">
+      <!-- ngIf: record.blockname!=null && record.blockname!=='' -->
+    </td><!-- end ngIf: stateHierarchyInfo[0].block -->
+    <!-- ngIf: stateHierarchyInfo[0].healthblock -->
+    <td ng-if="stateHierarchyInfo[0].healthblock" class="ng-scope">
+      <!-- ngIf: record.healthblockname!=null && record.healthblockname!=='' -->
+    </td><!-- end ngIf: stateHierarchyInfo[0].healthblock -->
+    <!-- ngIf: stateHierarchyInfo[0].subdivision -->
+    <td ng-if="stateHierarchyInfo[0].subdivision" class="ng-scope">
+      <!-- ngIf: record.subdivisionname!=null && record.subdivisionname!=='' -->
+    </td><!-- end ngIf: stateHierarchyInfo[0].subdivision -->
+    <!-- ngIf: stateHierarchyInfo[0].dulb || stateHierarchyInfo[0].sulb  -->
+    <td ng-if="stateHierarchyInfo[0].dulb || stateHierarchyInfo[0].sulb " class="ng-binding ng-scope"></td>
+    <!-- end ngIf: stateHierarchyInfo[0].dulb || stateHierarchyInfo[0].sulb  -->
+    <td class="ng-binding">Health Sub Centre</td>
+    <td class="ng-binding">2004603</td>
+    <!-- ngIf: record.mon_order==1 || dsummary.reporttype.report_code!='AFAP' -->
+    <td ng-if="record.mon_order==1 || dsummary.reporttype.report_code!='AFAP'" rowspan="" style="vertical-align: middle;"
+      class="ng-binding ng-scope">AAMC Amrit Vihar</td>
+    <!-- end ngIf: record.mon_order==1 || dsummary.reporttype.report_code!='AFAP' -->
+    <td class="ng-binding"></td>
+    <td class="ng-binding">0</td>
+    <td class="ng-binding">1117131860</td>
+    <td class="ng-binding">Urban</td>
+    <td class="ng-binding">Public</td>
+    <td class="ng-binding">Physical</td>
+    <td class="ng-binding">Open</td>
+    <!-- ngIf: dsummary.reporttype.report_code=='AFAP' -->
+    <!-- ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    <td ng-repeat="row_values in record.reported_value.split('~') track by $index" style="text-align: right;"
+      class="ng-binding ng-scope"></td>
+    <!-- end ngRepeat: row_values in record.reported_value.split('~') track by $index -->
+    </tr>
